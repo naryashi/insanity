@@ -2,22 +2,22 @@
 #automatized install :)
 
 
-sudo rm -rf ~/pure/hosts/kinni/hardware-configuration.nix
+sudo rm -rf ~/midnight/hosts/kinni/hardware-configuration.nix
 
-sudo mv ~/pure  /
+sudo mv ~/midnight  /
 
-sudo chown -R naryashi:users /pure
+sudo chown -R naryashi:users /midnight
 
-sudo chmod u+w /pure
+sudo chmod u+w /midnight
 
-sudo cp /etc/nixos/hardware-configuration.nix /pure/hosts/kinni
+sudo cp /etc/nixos/hardware-configuration.nix /midnight/hosts/kinni
 
 clear
 
-sudo nixos-rebuild switch --flake path:/pure#kinni
+sudo nixos-rebuild switch --flake path:/midnight#kinni
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-NH_OS_FLAKE=/pure nh os switch -u
+NH_OS_FLAKE=/midnight nh os switch -u
 
 echo "End :3"

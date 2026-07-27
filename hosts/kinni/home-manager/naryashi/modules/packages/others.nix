@@ -7,12 +7,8 @@
   home.packages = with pkgs; [
 
     #dev
-    zed
+    #zed-editor
     helix
-
-    #shh
-    javaPackages.compiler.temurin-bin.jdk-26
-    spotify
   ];
 
 }

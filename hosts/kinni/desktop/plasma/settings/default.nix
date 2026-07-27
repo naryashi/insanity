@@ -21,8 +21,6 @@
     konsole
     okular
     gwenview
-    spectacle
-    kate
     kdenlive
     k3b
     kmail

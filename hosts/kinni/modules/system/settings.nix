@@ -91,54 +91,13 @@
     clean.enable = true;
   };
   #flake and home dir
-  environment.variables.NH_FLAKE = "/pure";
-  environment.variables.NH_OS_FLAKE = "/pure";
-  environment.variables.NH_HOME_FLAKE = "/pure";
+  environment.variables.NH_FLAKE = "/midnight";
+  environment.variables.NH_OS_FLAKE = "/midnight";
+  environment.variables.NH_HOME_FLAKE = "/midnight";
 
-  #POWER SESSION
 
-  #services.tlp = lib.mkDefault {
-   # enable = true;
-   # settings = {
-   #   START_CHARGE_THRESH_BAT0 = 40;
-   #   CPU_BOOST_ON_AC = 1;
-   #   CPU_BOOST_ON_BAT = 0;
-   #   CPU_HWP_DYN_BOOST_ON_AC = 1;
-   #   CPU_HWP_DYN_BOOST_ON_BAT = 1;
-   #   CPU_SCALING_GOVERNOR_ON_AC = "performance";
-   #   CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-   #   CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
-   #   CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_power";
-   #   PLATFORM_PROFILE_ON_AC = "performance";
-   #   PLATFORM_PROFILE_ON_BAT = "balanced_power";
-   #   STOP_CHARGE_THRESH_BAT0 = 80;
-   #   CPU_MIN_PERF_ON_AC = 0;
-   #   CPU_MAX_PERF_ON_AC = 100;
-   #   CPU_MIN_PERF_ON_BAT = 0;
-   #   CPU_MAX_PERF_ON_BAT = 30;
-  #  };
- # };
-
-  services.power-profiles-daemon.enable = true;
-
-  powerManagement = {
-    enable = true;
-    cpuFreqGovernor = "ondemand";
-    cpufreq.max = null;
-    cpufreq.min = null;
-  };
-
-  #user area
-  users.users.naryashi = {
-    isNormalUser = true;
-    description = "naryashi";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-      "audio"
-    ];
 
     #packages = with pkgs; [
     #];
-  };
+
 }

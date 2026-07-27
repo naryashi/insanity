@@ -7,7 +7,6 @@
     pkg:
     builtins.elem (lib.getName pkg) [
       "steam"
-      "spotify"
     ];
 
 }

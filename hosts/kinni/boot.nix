@@ -20,10 +20,9 @@
   boot.initrd.kernelModules = [ "amdgpu" ];
   boot.kernelParams = [
     "amd_pstate=active"
-
   ];
   boot.kernel.sysctl = {
-    "vm.swappiness" = 60;
+    "vm.swappiness" = 30;
   };
 
 }
