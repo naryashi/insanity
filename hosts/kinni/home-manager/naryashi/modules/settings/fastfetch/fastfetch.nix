@@ -42,6 +42,12 @@
           type = "memory";
           key = "Memory";
         }
+
+        {
+          type = "disk";
+          key = "Disk  ";
+        }
+
         "break"
         {
           type = "colors";

@@ -7,7 +7,6 @@
 
   #boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
-  #boot.kernelPackages = pkgs.linuxPackages_cachyos-lto;
   # Bootloader.
   boot.loader.systemd-boot = {
     enable = true;

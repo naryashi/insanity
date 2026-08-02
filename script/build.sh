@@ -16,8 +16,6 @@ clear
 
 sudo nixos-rebuild switch --flake path:/midnight#kinni
 
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
 NH_OS_FLAKE=/midnight nh os switch -u
 
 echo "End :3"

@@ -8,8 +8,8 @@
     ./hardware.nix
     ./hardware-configuration.nix
     #./desktop/niri/default.nix
-    #./desktop/gnome/settings/default.nix
-    ./desktop/plasma/settings/default.nix
+    ./desktop/gnome/settings/default.nix
+    #./desktop/plasma/settings/default.nix
     ./dev/container.nix
     #./dev/libraries.nix
     ./modules/programs/appimage.nix

@@ -6,8 +6,8 @@
   imports = [
 
     #DESKTOP
-    #./modules/desktop/gnome/extensions.nix
-    #./modules/desktop/gnome/settings.nix
+    ./modules/desktop/gnome/extensions.nix
+    ./modules/desktop/gnome/settings.nix
     #./modules/desktop/niri/default.nix
     #./modules/desktop/niri/noctalia/default.nix
 
@@ -17,9 +17,7 @@
     ./modules/dev/languages/default.nix
 
     #PACKAGES
-    ./modules/packages/games.nix
-    ./modules/packages/others.nix
-    ./modules/packages/system.nix
+    ./modules/packages/default.nix
 
     #terminal and shell
     #./modules/terminal/alacritty/alacritty.nix

@@ -6,6 +6,7 @@
 
   home.packages = with pkgs; [
 
+
     #system tools
     cpu-x
     btrfs-progs
@@ -33,5 +34,16 @@
     nerd-fonts.symbols-only
     nerd-fonts.victor-mono
 
+    #games
+    gamemode
+    steam
+    steam-run
+    heroic
+    gpu-screen-recorder-gtk
+
+    #dev
+    #zed-editor
+    helix
   ];
+
 }
