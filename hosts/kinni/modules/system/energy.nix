@@ -1,10 +1,11 @@
 {
-  ...
+lib, 
+ ...
 }:
 {
   #POWER SESSION
 
-  services.tlp = lib.mkDefault {
+ /* services.tlp = lib.mkDefault {
     enable = true;
     settings = {
       START_CHARGE_THRESH_BAT0 = 40;
@@ -25,11 +26,11 @@
       CPU_MAX_PERF_ON_BAT = 30;
     };
   };
-
-  services.power-profiles-daemon.enable = false;
+*/
+  services.power-profiles-daemon.enable = true;
 
   powerManagement = {
-    enable = false;
+    enable = true;
     cpuFreqGovernor = "ondemand";
     cpufreq.max = null;
     cpufreq.min = null;

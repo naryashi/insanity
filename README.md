@@ -68,14 +68,10 @@ Special thanks to [thou vow](https://github.com/thou-vow) for support.
 │       │           │   └── languages
 │       │           │       └── default.nix
 │       │           ├── packages
-│       │           │   ├── games.nix
-│       │           │   ├── others.nix
-│       │           │   └── system.nix
+│       │           │   └── default.nix
 │       │           ├── settings
-│       │           │   ├── fastfetch
-│       │           │   │   └── fastfetch.nix
-│       │           │   └── programs
-│       │           │       └── others.nix
+│       │           │   └── fastfetch
+│       │           │       └── fastfetch.nix
 │       │           └── terminal
 │       │               ├── alacritty
 │       │               │   └── alacritty.nix
@@ -91,7 +87,9 @@ Special thanks to [thou vow](https://github.com/thou-vow) for support.
 │       │   │   ├── default.nix
 │       │   │   └── services.nix
 │       │   └── system
-│       │       └── settings.nix
+│       │       ├── energy.nix
+│       │       ├── settings.nix
+│       │       └── user.nix
 │       ├── packages
 │       │   ├── default.nix
 │       │   └── settings.nix
@@ -99,9 +97,10 @@ Special thanks to [thou vow](https://github.com/thou-vow) for support.
 │           └── powersave.nix
 ├── README.md
 └── script
-    └── build.sh
+    ├── build.sh
+    └── flatpak.sh
 
-38 directories, 39 files
+37 directories, 39 files
 ```
 ---
 
