@@ -11,7 +11,6 @@
         pkgs.icu
         pkgs.fuse
         pkgs.libxcrypt-legacy
-        pkgs.gearlever
       ];
     };
   };

@@ -6,7 +6,6 @@
 
   home.packages = with pkgs; [
 
-
     #system tools
     cpu-x
     btrfs-progs
@@ -44,6 +43,9 @@
     #dev
     #zed-editor
     helix
+    jetbrains.pycharm
+    jetbrains.idea
+    jetbrains.rust-rover
   ];
 
 }

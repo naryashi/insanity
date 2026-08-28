@@ -4,7 +4,7 @@
 {
   imports = [
     ./boot.nix
-    ./fs.nix
+    #./fs.nix
     ./hardware.nix
     ./hardware-configuration.nix
     #./desktop/niri/default.nix
