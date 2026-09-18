@@ -25,7 +25,6 @@
     tree
     wget
     unzip
-    alacritty
     onefetch
 
     #fonts
@@ -40,12 +39,16 @@
     heroic
     gpu-screen-recorder-gtk
 
-    #dev
+    #editors
+
     #zed-editor
     helix
+    vscode
     jetbrains.pycharm
     jetbrains.idea
     jetbrains.rust-rover
+    jetbrains.webstorm
+
   ];
 
 }

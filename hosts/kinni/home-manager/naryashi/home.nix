@@ -6,13 +6,12 @@
   imports = [
 
     #DESKTOP
-    ./modules/desktop/gnome/extensions.nix
-    ./modules/desktop/gnome/settings.nix
+    ./modules/desktop/gnome/config.nix
     #./modules/desktop/niri/default.nix
-    #./modules/desktop/niri/noctalia/default.nix
+    #/modules/desktop/niri/noctalia/default.nix
 
     #DEV
-    ./modules/dev/editors/zed/zed.nix
+    #./modules/dev/editors/zed/zed.nix
     ./modules/dev/editors/helix/helix.nix
     ./modules/dev/languages/default.nix
 

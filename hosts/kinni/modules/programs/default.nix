@@ -10,4 +10,5 @@
     steam.enable = true;
     direnv.enable = true;
   };
+
 }

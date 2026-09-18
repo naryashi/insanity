@@ -19,9 +19,7 @@
     nil
     nixfmt
     nix-tree
-    nix-output-monitor
     nix-update
-    nix-init
     deadnix
     statix
     nix-eval-jobs
@@ -36,24 +34,15 @@
     # Rust Toolchain
     rustup
     cargo-watch
-    cargo-edit
-    cargo-expand
-    cargo-outdated
-    cargo-audit
-    cargo-deny
-    cargo-tarpaulin
-    rust-bindgen
-    wasm-pack
+    rustc
 
     #C#
     dotnet-sdk
     mono
-    omnisharp-roslyn
-    csharp-ls
-    nuget
-    dotnet-ef
 
-    #Exercism
-    exercism
+    #java
+    openjdk
+    openjdk21
+    nixpkgs-openjdk-updater
   ];
 }

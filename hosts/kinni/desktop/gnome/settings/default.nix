@@ -16,15 +16,6 @@
   services.gnome.games.enable = false;
   services.gnome.localsearch.enable = false;
 
-  #my packages for gnome
-  environment.systemPackages = with pkgs; [
-    ptyxis
-    gnome-tweaks
-    nautilus
-    dconf-editor
-    gnome-color-manager
-  ];
-
   #exclude pkgs
   environment.gnome.excludePackages = with pkgs; [
     gnome-calendar
@@ -41,6 +32,5 @@
     gnome-tour
     xterm
     gnome-text-editor
-    gnome-disk-utility
   ];
 }
