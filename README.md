@@ -1,10 +1,13 @@
 # pure-nix ❄️
+<div align="center">
 
-A minimal NixOS configuration for daily driving.
+*A highly modular, reproducible, and performance-focused NixOS configuration.*
 
-This repo contain my NixOS configuration and my wallpaper :)
+[![NixOS Unstable](https://img.shields.io/badge/NixOS-unstable-blue.svg?logo=nixos&logoColor=white)](https://nixos.org)
+[![Flakes](https://img.shields.io/badge/Nix_Flakes-enabled-cyan.svg?logo=nixos&logoColor=white)](https://wiki.nixos.org/wiki/Flakes)
+[![Home Manager](https://img.shields.io/badge/Home--Manager-active-green.svg?logo=nixos&logoColor=white)](https://github.com/nix-community/home-manager)
 
-Special thanks to [thou vow](https://github.com/thou-vow) for support.
+</div>
 
 > **Note**: This setup works for me — on my machine. Yours may differ.
 
@@ -18,89 +21,35 @@ Special thanks to [thou vow](https://github.com/thou-vow) for support.
 | CPU | Ryzen 5 5600U |
 | RAM | 16GB DDR4 (3200 MHz) |
 | GPU | AMD Radeon Graphics (integrated) |
-| Desktop | GNOME / Mutter (Wayland) |
-
 ---
 
 ## Structure
 ```
-├── flake.lock
-├── flake.nix
-├── hosts
-│   └── kinni
-│       ├── boot.nix
-│       ├── configuration.nix
-│       ├── desktop
-│       │   ├── gnome
-│       │   │   └── settings
-│       │   │       └── default.nix
-│       │   ├── niri
-│       │   │   └── default.nix
-│       │   └── plasma
-│       │       └── settings
-│       │           └── default.nix
-│       ├── dev
-│       │   ├── container.nix
-│       │   └── libraries.nix
-│       ├── fs.nix
-│       ├── hardware-configuration.nix
-│       ├── hardware.nix
-│       ├── home-manager
-│       │   └── naryashi
-│       │       ├── home.nix
-│       │       └── modules
-│       │           ├── desktop
-│       │           │   ├── gnome
-│       │           │   │   ├── extensions.nix
-│       │           │   │   └── settings.nix
-│       │           │   └── niri
-│       │           │       ├── config
-│       │           │       │   └── config.kdl
-│       │           │       ├── default.nix
-│       │           │       └── noctalia
-│       │           │           └── default.nix
-│       │           ├── dev
-│       │           │   ├── editors
-│       │           │   │   ├── helix
-│       │           │   │   │   └── helix.nix
-│       │           │   │   └── zed
-│       │           │   │       └── zed.nix
-│       │           │   └── languages
-│       │           │       └── default.nix
-│       │           ├── packages
-│       │           │   └── default.nix
-│       │           ├── settings
-│       │           │   └── fastfetch
-│       │           │       └── fastfetch.nix
-│       │           └── terminal
-│       │               ├── alacritty
-│       │               │   └── alacritty.nix
-│       │               ├── kitty
-│       │               │   └── kitty.nix
-│       │               ├── shell
-│       │               │   └── zsh.nix
-│       │               └── starship
-│       │                   └── default.nix
-│       ├── modules
-│       │   ├── programs
-│       │   │   ├── appimage.nix
-│       │   │   ├── default.nix
-│       │   │   └── services.nix
-│       │   └── system
-│       │       ├── energy.nix
-│       │       ├── settings.nix
-│       │       └── user.nix
-│       ├── packages
-│       │   ├── default.nix
-│       │   └── settings.nix
-│       └── profiles
-│           └── powersave.nix
-├── README.md
-└── script
-    ├── build.sh
-    └── flatpak.sh
+├── flake.nix                  # Flake entry point
+├── flake.lock                 # Pinned dependencies/inputs
+├── script/                    # Helper and automation scripts
+│   ├── build.sh               # System rebuild script
+│   └── flatpak.sh             # Flatpak integration manager
+└── hosts/
+    └── kinni/                 # Host-specific configuration
+        ├── boot.nix           # Bootloader / Systemd-boot settings
+        ├── configuration.nix  # Core NixOS system configuration
+        ├── hardware.nix       # Hardware drivers and kernel modules
+        ├── fs.nix             # Filesystem mapping and mount points
+        │
+        ├── insanity/          # System Modules (NixOS Level)
+        │   ├── desktop/       # Niri, GNOME, and Plasma setups
+        │   ├── profiles/      # Power management profiles (Powersave)
+        │   ├── container.nix  # Container support (Docker/Podman)
+        │   ├── security.nix   # little things
+        │   └── user.nix       # Primary user account declaration
+        │
+        └── home-manager/      # User Modules (Home-Manager Level)
+            └── naryashi/
+                ├── home.nix   # Main Home-Manager entry point
+                └── modules/   # Terminal (Kitty, Zsh, Starship), PKGs, and Desktop
 
-37 directories, 39 files
+25 directories, 30 files
 ```
 ---
 
@@ -109,5 +58,3 @@ Special thanks to [thou vow](https://github.com/thou-vow) for support.
 This is my personal setup.  
 It fits my ThinkBook and my preferences.  
 Yours may differ — and that's fine.
-
-If you find something useful here, feel free to borrow, adapt, or ignore. ✨
