@@ -7,21 +7,14 @@
     ./fs.nix
     ./hardware.nix
     ./hardware-configuration.nix
-    #./desktop/niri/default.nix
-    ./desktop/gnome/settings/default.nix
-    #./desktop/plasma/settings/default.nix
-    ./dev/container.nix
-    #./dev/libraries.nix
-    ./modules/programs/appimage.nix
-    ./modules/programs/default.nix
-    ./modules/programs/services.nix
-    ./modules/system/energy.nix
-    ./modules/system/security.nix
-    ./modules/system/settings.nix
-    ./modules/system/user.nix
-    ./packages/default.nix
-    ./packages/settings.nix
-    #./profiles/powersave.nix
+    #./insanity/desktop/gnome/default.nix
+    #./insanity/desktop/niri/default.nix
+    ./insanity/desktop/plasma/default.nix
+    ./insanity/appimage.nix
+    ./insanity/container.nix
+    ./insanity/insanity.nix
+    ./insanity/security.nix
+    ./insanity/user.nix
   ];
 
   nix.settings.experimental-features = [

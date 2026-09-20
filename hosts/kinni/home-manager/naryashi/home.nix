@@ -10,16 +10,11 @@
     #./modules/desktop/niri/default.nix
     #/modules/desktop/niri/noctalia/default.nix
 
-    #DEV
-    #./modules/dev/editors/zed/zed.nix
-    ./modules/dev/editors/helix/helix.nix
-    ./modules/dev/languages/default.nix
-
     #PACKAGES
-    ./modules/packages/default.nix
+    ./modules/pkgs/default.nix
+    ./modules/pkgs/dev.nix
 
     #terminal and shell
-    #./modules/terminal/alacritty/alacritty.nix
     ./modules/terminal/kitty/kitty.nix
     ./modules/terminal/shell/zsh.nix
     ./modules/terminal/starship/default.nix

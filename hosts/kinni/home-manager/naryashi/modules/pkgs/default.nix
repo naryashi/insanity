@@ -39,16 +39,6 @@
     heroic
     gpu-screen-recorder-gtk
 
-    #editors
-
-    #zed-editor
-    helix
-    vscode
-    jetbrains.pycharm
-    jetbrains.idea
-    jetbrains.rust-rover
-    jetbrains.webstorm
-
   ];
 
 }

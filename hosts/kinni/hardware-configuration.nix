@@ -8,37 +8,37 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" "sdhci_pci" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" "sdhci_pci" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/mapper/luks-eb13b2af-42f4-4700-a2a7-1cfdbc9c3d33";
+    { device = "/dev/mapper/luks-6c909116-59c7-4995-8284-07ebc1f8f43e";
       fsType = "btrfs";
     };
 
-  boot.initrd.luks.devices."luks-eb13b2af-42f4-4700-a2a7-1cfdbc9c3d33".device = "/dev/disk/by-uuid/eb13b2af-42f4-4700-a2a7-1cfdbc9c3d33";
+  boot.initrd.luks.devices."luks-6c909116-59c7-4995-8284-07ebc1f8f43e".device = "/dev/disk/by-uuid/6c909116-59c7-4995-8284-07ebc1f8f43e";
 
   fileSystems."/nix" =
-    { device = "/dev/mapper/luks-eb13b2af-42f4-4700-a2a7-1cfdbc9c3d33";
+    { device = "/dev/mapper/luks-6c909116-59c7-4995-8284-07ebc1f8f43e";
       fsType = "btrfs";
       options = [ "subvol=nix" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/502E-676C";
+    { device = "/dev/disk/by-uuid/D586-3500";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/00ffe35b-2ad6-4503-90a7-9a73e565bd88";
+    { device = "/dev/disk/by-uuid/c1eeb513-c11a-4ea5-b2f4-6a085c333379";
       fsType = "btrfs";
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/6f2ccd5b-d6da-4e0d-9b03-22829f6d03e0"; }
+    [ { device = "/dev/disk/by-uuid/69ea376d-48fc-4d3b-b412-4f05611436bd"; }
     ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
