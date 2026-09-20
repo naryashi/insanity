@@ -1,4 +1,4 @@
-# pure-nix ❄️
+# insanity-nix ❄️
 <div align="center">
 
 *A highly modular, reproducible, and performance-focused NixOS configuration.*
