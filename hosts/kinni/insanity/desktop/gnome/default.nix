@@ -11,6 +11,7 @@
   services.desktopManager.gnome.enable = lib.mkDefault true;
 
   #gnome services and default packages
+  services.gvfs.enable = true;
   services.gnome.core-apps.enable = false;
   services.gnome.core-developer-tools.enable = false;
   services.gnome.games.enable = false;

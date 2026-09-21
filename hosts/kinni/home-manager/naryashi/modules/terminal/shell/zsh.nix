@@ -24,16 +24,16 @@
       #games`
       osu-wine = "steam-run osu-wine";
 
-      #dev
-      zed-rs = "zeditor ~/code/rust";
-
-      zed-py = "zeditor ~/code/python";
-
-      zed-nix = "zeditor /pure";
-
       #formatter test
       fmt-test = "find . -name '*.nix' -type f";
-
+      
+      #utils
+      ls = "eza --icons";
+      ll = "eza -l --icons --git";
+      tree = "eza --tree --icons";
+      cat = "bat";
+      grep = "rg";
+      find = "fd";
     };
   };
   home.packages = with pkgs; [

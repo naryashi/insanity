@@ -9,6 +9,13 @@
     enable = true;
     binfmt = true;
     package = pkgs.appimage-run.override {
+    extraPkgs = pkgs: 
+    [
+    pkgs.icu
+    pkgs.libxcrypt-legacy
+    pkgs.python312
+    #pkgs.python312Packages.torch
+    ]; 
     };
   };
 
@@ -96,12 +103,6 @@
       dbus
       alsa-lib
       expat
-
-      #FOR APPIMAGE  
-      icu
-      fuse
-      e2fsprogs
-      libxcrypt-legacy
 
       # darktable nightly AppImage https://github.com/darktable-org/darktable/releases
       gmp

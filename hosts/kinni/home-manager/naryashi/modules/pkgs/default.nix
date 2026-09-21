@@ -15,19 +15,10 @@
 
     #terminal
     kitty
-    fastfetch
-    git
-    curl
-    fish
-    ncdu
-    grc
-    starship
-    tree
-    wget
-    unzip
-    onefetch
 
     #fonts
+    fira-code-symbols
+    fira-code
     nerd-fonts.adwaita-mono
     nerd-fonts.symbols-only
     nerd-fonts.victor-mono

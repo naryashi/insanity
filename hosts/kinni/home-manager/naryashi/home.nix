@@ -8,9 +8,11 @@
     #DESKTOP
     ./modules/desktop/gnome/config.nix
     #./modules/desktop/niri/default.nix
-    #/modules/desktop/niri/noctalia/default.nix
-
-    #PACKAGES
+    #./modules/desktop/niri/noctalia/default.nix
+    #./modules/desktop/plasma/config.nix
+    
+    #PACKAGES 
+    ./modules/pkgs/cli.nix
     ./modules/pkgs/default.nix
     ./modules/pkgs/dev.nix
 

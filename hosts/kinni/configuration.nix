@@ -7,9 +7,9 @@
     ./fs.nix
     ./hardware.nix
     ./hardware-configuration.nix
-    #./insanity/desktop/gnome/default.nix
+    ./insanity/desktop/gnome/default.nix
     #./insanity/desktop/niri/default.nix
-    ./insanity/desktop/plasma/default.nix
+    #./insanity/desktop/plasma/default.nix
     ./insanity/appimage.nix
     ./insanity/container.nix
     ./insanity/insanity.nix

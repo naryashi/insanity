@@ -4,7 +4,8 @@
 }:
 {
   home.packages = with pkgs; [
-    # Build System & Core Tools
+  /*
+    Build System & Core Tools
     gnumake
     cmake
     ninja
@@ -13,30 +14,29 @@
     # C/C++ Toolchain
     clang
     clang-tools
-
+*/
     # Nix Toolchain
     nix
     nil
     nixfmt
     nix-tree
     nix-update
-    deadnix
-    statix
     nix-eval-jobs
 
     # Python Toolchain
     python3
-    uv
-    ruff
     pyright
-    mypy
 
     # Rust Toolchain
     rustup
     cargo-watch
     rustc
-
-    #C#
+    cargo-expand
+    cargo-audit
+    cargo-deny
+    cargo-flamegraph
+    
+    #Csharp
     dotnet-sdk
     mono
 
@@ -50,6 +50,6 @@
     jetbrains.pycharm
     jetbrains.idea
     jetbrains.rust-rover
-    jetbrains.webstorm
+    #jetbrains.webstorm
   ];
 }

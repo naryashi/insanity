@@ -7,19 +7,13 @@
 
   services = {
     #SDDM
-    displayManager.sddm = lib.mkDefault {
-      enable = true;
-      wayland.enable = true;
-      autoNumlock = true;
-    };
+    displayManager.plasma-login-manager.enable = true;
 
     #PLASMA ENVIROMENT
     desktopManager.plasma6.enable = true;
   };
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
     elisa
-    konsole
-    okular
     gwenview
     kdenlive
     k3b
@@ -35,8 +29,8 @@
     kmag
     plasma-browser-integration
     oxygen
-    breeze-grub
-    breeze-plymouth
+    #breeze-grub
+    #breeze-plymouth
 
   ];
 }

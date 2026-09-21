@@ -5,8 +5,8 @@
 }:
 {
   /*
-    the most of settings of the systemk still here, energy, audio, nh settings, 
-    and default packages for the system. 
+    the most of settings of the systemk still here, energy, audio, nh settings,
+    and default packages for the system.
     others settings like security, internet and others still in "security.nix" (in this folder).
     in order is pkgs -> programs and services -> unfree -> energy ->
     ^ hardware -> audio for low latency -> locale -> keyboard -nix settings -> nh (nix helper utility)
@@ -45,7 +45,7 @@
     ];
 
     #POWER SESSION
-
+/*
   services.tlp = lib.mkDefault {
     enable = true;
     settings = {
@@ -66,11 +66,11 @@
 
       #LP_DEFAULT_MODE = "AC";
       #TLP_PERSISTENT_DEFAULT = 1;
-    
+
     };
   };
-
-  services.power-profiles-daemon.enable = false;
+*/
+  services.power-profiles-daemon.enable = true;
 
   powerManagement = {
     enable = true;
@@ -151,13 +151,12 @@
     enable = true;
     clean.enable = true;
   };
+  
+  
   #flake and home dir
-  environment.variables.NH_FLAKE = "/insanity";
-  environment.variables.NH_OS_FLAKE = "/insanity";
-  environment.variables.NH_HOME_FLAKE = "/insanity";
-
-
-
+  environment.variables.NH_FLAKE = "insanity";
+  environment.variables.NH_OS_FLAKE = "insanity";
+  environment.variables.NH_HOME_FLAKE = "insanity";
     #packages = with pkgs; [
     #];
 }
