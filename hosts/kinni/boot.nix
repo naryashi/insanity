@@ -14,7 +14,7 @@
     consoleMode = "keep";
     memtest86.enable = false;
     configurationLimit = 5;
-};
+  };
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.kernelModules = [ "amdgpu" ];
   boot.kernelParams = [

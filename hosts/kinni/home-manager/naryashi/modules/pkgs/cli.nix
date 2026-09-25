@@ -22,7 +22,7 @@
     helmfile
     lazygit
     nix-output-monitor
-    
+
     #personal use (in the most time)
     fastfetch
     git
@@ -36,6 +36,5 @@
     unzip
     onefetch
   ];
-
 
 }

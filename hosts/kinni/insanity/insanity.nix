@@ -21,15 +21,14 @@
     home-manager
   ];
 
-
-    programs = {
+  programs = {
     firefox.enable = true;
     dconf.enable = true;
     gamemode.enable = true;
     steam.enable = true;
     direnv.enable = true;
   };
-    services = {
+  services = {
     xserver.enable = false;
     flatpak.enable = true;
     ratbagd.enable = true;
@@ -44,32 +43,32 @@
       "steam"
     ];
 
-    #POWER SESSION
-/*
-  services.tlp = lib.mkDefault {
-    enable = true;
-    settings = {
-      CPU_BOOST_ON_AC = 1;
-      CPU_BOOST_ON_BAT = 0;
-      CPU_HWP_DYN_BOOST_ON_AC = 1;
-      CPU_HWP_DYN_BOOST_ON_BAT = 1;
-      CPU_SCALING_GOVERNOR_ON_AC = "performance";
-      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
-      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
-      PLATFORM_PROFILE_ON_AC = "performance";
-      PLATFORM_PROFILE_ON_BAT = "power";
-      CPU_MIN_PERF_ON_BAT = 0;
-      CPU_MAX_PERF_ON_BAT = 35;
-      START_CHARGE_THRESH_BAT0 = 55;
-      STOP_CHARGE_THRESH_BAT0 = 65;
+  #POWER SESSION
+  /*
+    services.tlp = lib.mkDefault {
+      enable = true;
+      settings = {
+        CPU_BOOST_ON_AC = 1;
+        CPU_BOOST_ON_BAT = 0;
+        CPU_HWP_DYN_BOOST_ON_AC = 1;
+        CPU_HWP_DYN_BOOST_ON_BAT = 1;
+        CPU_SCALING_GOVERNOR_ON_AC = "performance";
+        CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+        CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+        CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+        PLATFORM_PROFILE_ON_AC = "performance";
+        PLATFORM_PROFILE_ON_BAT = "power";
+        CPU_MIN_PERF_ON_BAT = 0;
+        CPU_MAX_PERF_ON_BAT = 35;
+        START_CHARGE_THRESH_BAT0 = 55;
+        STOP_CHARGE_THRESH_BAT0 = 65;
 
-      #LP_DEFAULT_MODE = "AC";
-      #TLP_PERSISTENT_DEFAULT = 1;
+        #LP_DEFAULT_MODE = "AC";
+        #TLP_PERSISTENT_DEFAULT = 1;
 
+      };
     };
-  };
-*/
+  */
   services.power-profiles-daemon.enable = true;
 
   powerManagement = {
@@ -80,7 +79,7 @@
   };
   #END POWER SESSION
 
-    hardware.bluetooth.enable = true;
+  hardware.bluetooth.enable = true;
 
   #AUDIO
   #jack, pulse, real time and compatibility
@@ -150,13 +149,14 @@
   programs.nh = {
     enable = true;
     clean.enable = true;
+    flake = "/home/naryashi/insanity";
   };
-  
-  
+
   #flake and home dir
-  environment.variables.NH_FLAKE = "insanity";
-  environment.variables.NH_OS_FLAKE = "insanity";
-  environment.variables.NH_HOME_FLAKE = "insanity";
-    #packages = with pkgs; [
-    #];
+
+  #environment.variables.NH_FLAKE = "/home/naryashi/nsanity";
+  #environment.variables.NH_OS_FLAKE = "/home/naryashi/nsanity";
+  #environment.variables.NH_HOME_FLAKE = "/home/naryashi/nsanity";
+  #packages = with pkgs; [
+  #];
 }

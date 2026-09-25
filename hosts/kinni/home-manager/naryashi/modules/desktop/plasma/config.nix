@@ -11,5 +11,5 @@
 
   qt = {
     enable = true;
-  }; 
+  };
 }

@@ -4,9 +4,9 @@
   ...
 }:
 {
-    security.apparmor = lib.mkDefault {
+  security.apparmor = lib.mkDefault {
     enable = true;
-    };
+  };
 
   #pkgs
   environment.systemPackages = with pkgs; [
@@ -14,7 +14,7 @@
     apparmor-profiles
     apparmor-pam
     apparmor-utils
-    apparmor-bin-utils 
+    apparmor-bin-utils
   ];
 
   #NETWORK

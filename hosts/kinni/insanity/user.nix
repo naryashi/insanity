@@ -3,7 +3,8 @@
   lib,
   ...
 }:
-{  users.users.naryashi = {
+{
+  users.users.naryashi = {
     isNormalUser = true;
     description = "naryashi";
     extraGroups = [

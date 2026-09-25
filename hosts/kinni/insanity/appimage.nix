@@ -9,17 +9,16 @@
     enable = true;
     binfmt = true;
     package = pkgs.appimage-run.override {
-    extraPkgs = pkgs: 
-    [
-    pkgs.icu
-    pkgs.libxcrypt-legacy
-    pkgs.python312
-    #pkgs.python312Packages.torch
-    ]; 
+      extraPkgs = pkgs: [
+        pkgs.icu
+        pkgs.libxcrypt-legacy
+        pkgs.python312
+        #pkgs.python312Packages.torch
+      ];
     };
   };
 
-#generic software
+  #generic software
   # To disable it temporarily use
   # unset NIX_LD
   programs.nix-ld = {
@@ -47,7 +46,7 @@
 
       # Inspired by steam
       # https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/st/steam/package.nix#L36-L85
-      networkmanager      
+      networkmanager
       vulkan-loader
       libgbm
       libdrm
@@ -56,11 +55,11 @@
       pciutils
       zenity
       # glibc_multi.bin # Seems to cause issue in ARM
-      
+
       # Only libraries are needed from those two
       libudev0-shim
-      
-      #games 
+
+      #games
       libogg
       libvorbis
       SDL
@@ -68,7 +67,7 @@
       glew110
       libidn
       tbb
-      
+
       # Other things from runtime
       flac
       freeglut
@@ -107,7 +106,6 @@
       # darktable nightly AppImage https://github.com/darktable-org/darktable/releases
       gmp
     ];
-  }; 
-
+  };
 
 }

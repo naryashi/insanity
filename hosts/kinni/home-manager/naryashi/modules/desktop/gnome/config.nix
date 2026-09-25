@@ -17,12 +17,12 @@
     nautilus
     dconf-editor
     gnome-disk-utility
+    gnome-calculator
     baobab
   ];
 
   gtk = {
     enable = true;
-
 
     gtk3.extraConfig = {
       Settings = ''

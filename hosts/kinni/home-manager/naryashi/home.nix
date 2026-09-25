@@ -10,8 +10,8 @@
     #./modules/desktop/niri/default.nix
     #./modules/desktop/niri/noctalia/default.nix
     #./modules/desktop/plasma/config.nix
-    
-    #PACKAGES 
+
+    #PACKAGES
     ./modules/pkgs/cli.nix
     ./modules/pkgs/default.nix
     ./modules/pkgs/dev.nix

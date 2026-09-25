@@ -26,7 +26,7 @@
 
       #formatter test
       fmt-test = "find . -name '*.nix' -type f";
-      
+
       #utils
       ls = "eza --icons";
       ll = "eza -l --icons --git";

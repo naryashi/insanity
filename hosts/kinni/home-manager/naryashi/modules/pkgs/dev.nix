@@ -4,17 +4,17 @@
 }:
 {
   home.packages = with pkgs; [
-  /*
-    Build System & Core Tools
-    gnumake
-    cmake
-    ninja
-    pkg-config
+    /*
+      Build System & Core Tools
+      gnumake
+      cmake
+      ninja
+      pkg-config
 
-    # C/C++ Toolchain
-    clang
-    clang-tools
-*/
+      # C/C++ Toolchain
+      clang
+      clang-tools
+    */
     # Nix Toolchain
     nix
     nil
@@ -35,7 +35,7 @@
     cargo-audit
     cargo-deny
     cargo-flamegraph
-    
+
     #Csharp
     dotnet-sdk
     mono
