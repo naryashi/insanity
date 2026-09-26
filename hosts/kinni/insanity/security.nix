@@ -32,6 +32,9 @@
 
   };
 
+  systemd.services.security = {
+    description = "the default and most important things for security in NixOS";
+    after = [ "network.target" ];
   #systemd hardening process 
    # This is where the real unit options are set
     serviceConfig = {
@@ -111,6 +114,7 @@
       #
       # Should usually be enabled.
       MemoryDenyWriteExecute = false;
-    };
 
+    };
+  };
 }
