@@ -21,7 +21,7 @@
     "amd_pstate=active"
   ];
   boot.kernel.sysctl = {
-    "vm.swappiness" = 70;
+    "vm.swappiness" = 40;
   };
 
 }

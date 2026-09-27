@@ -7,7 +7,6 @@
   environment.systemPackages = with pkgs; [
     docker
     docker-compose
-    distroshelf
     distrobox
     podman
     podman-compose

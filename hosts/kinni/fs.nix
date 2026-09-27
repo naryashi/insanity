@@ -8,12 +8,13 @@
       "noatime"
       "ssd"
     ];
+    /*
     "/home".options = [
       "compress=zstd"
       "noatime"
       "ssd"
-    ];
-
+    ]; 
+    */
   };
 
 }
