@@ -15,6 +15,9 @@
     ./insanity/insanity.nix
     ./insanity/security.nix
     ./insanity/user.nix
+    #my tools you probably don't need/use this.
+    ./insanity/cybersec/tools.nix
+    ./insanity/system-tools/default.nix
   ];
 
   nix.settings.experimental-features = [
