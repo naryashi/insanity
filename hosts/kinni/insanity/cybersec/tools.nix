@@ -23,10 +23,9 @@
   binwalk
   volatility3
   gdb
-  pwndbg
   metasploit
   john
   hashcat
   ];
-
+  programs.wireshark.enable = true;
 }
