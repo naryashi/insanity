@@ -1,0 +1,28 @@
+{
+  pkgs,
+  ...
+}:
+{
+  environment.systemPackages = with pkgs; [
+  trippy
+  mtr
+  dnsutils
+  dogdns
+  iperf3
+  bandwhich
+  iftop
+  nethogs
+  wireguard-tools
+  btop
+  htop
+  lsof
+  strace
+  pciutils
+  usbutils
+  lm_sensors
+  smem
+  duf
+  ncdu
+  smartmontools
+  ];
+}
