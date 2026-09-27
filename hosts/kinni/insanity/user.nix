@@ -13,6 +13,7 @@
       "audio"
       "docker"
       "podman"
+      "wireshark"
       "virtualisation"
     ];
     subGidRanges = [
