@@ -7,14 +7,12 @@
   trippy
   mtr
   dnsutils
-  dogdns
+  doggo
   iperf3
   bandwhich
   iftop
   nethogs
   wireguard-tools
-  btop
-  htop
   lsof
   strace
   pciutils
@@ -22,7 +20,6 @@
   lm_sensors
   smem
   duf
-  ncdu
   smartmontools
   ];
 }
