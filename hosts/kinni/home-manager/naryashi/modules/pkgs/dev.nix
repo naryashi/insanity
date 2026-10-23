@@ -45,11 +45,11 @@
     openjdk21
     nixpkgs-openjdk-updater
 
-    helix
+    #helix
     vscode
-    jetbrains.pycharm
-    jetbrains.idea
-    jetbrains.rust-rover
+    #jetbrains.pycharm
+    #jetbrains.idea
+    #jetbrains.rust-rover
     #jetbrains.webstorm
   ];
 }

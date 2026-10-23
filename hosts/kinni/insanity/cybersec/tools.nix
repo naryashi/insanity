@@ -5,9 +5,10 @@
 {
 
   environment.systemPackages = with pkgs; [
+  wireshark
+
   nmap
   masscan
-  wireshark
   tshark
   socat
   netcat-openbsd
@@ -26,6 +27,7 @@
   metasploit
   john
   hashcat
+
   ];
   programs.wireshark.enable = true;
 }

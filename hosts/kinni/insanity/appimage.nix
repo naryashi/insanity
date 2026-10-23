@@ -14,7 +14,6 @@
         pkgs.libxcrypt-legacy
         pkgs.python312
         pkgs.e2fsprogs
-        #pkgs.python312Packages.torch
       ];
     };
   };

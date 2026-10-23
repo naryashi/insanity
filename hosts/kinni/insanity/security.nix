@@ -4,6 +4,7 @@
   ...
 }:
 {
+  /*  
   security.apparmor = lib.mkDefault {
     enable = true;
   };
@@ -16,9 +17,9 @@
     apparmor-utils
     apparmor-bin-utils
   ];
+  */
 
   #NETWORK
-  #network
   networking.hostName = "kinni"; # Define hostname.
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
