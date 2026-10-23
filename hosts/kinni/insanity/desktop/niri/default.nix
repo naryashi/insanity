@@ -2,8 +2,7 @@
   inputs,
   pkgs,
   ...
-}:
-{
+}: {
   environment.systemPackages = with pkgs; [
     niri
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -23,7 +22,7 @@
 
   xdg.portal = {
     config.niri = {
-      "org.freedesktop.impl.portal.FileChooser" = [ "kde" ]; # or "kde"
+      "org.freedesktop.impl.portal.FileChooser" = ["kde"]; # or "kde"
     };
 
     enable = true;

@@ -1,7 +1,4 @@
-{
-  ...
-}:
-{
+{...}: {
   # specialisation = {
   #  powersave = {
   #   configuration = {

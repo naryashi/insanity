@@ -1,10 +1,5 @@
-{
-  ...
-}:
-
-{
+{...}: {
   imports = [
-
     #DESKTOP
     ./modules/desktop/gnome/config.nix
     #./modules/desktop/niri/default.nix
@@ -23,7 +18,6 @@
 
     #SETTINGS
     ./modules/settings/fastfetch/fastfetch.nix
-
   ];
 
   #home

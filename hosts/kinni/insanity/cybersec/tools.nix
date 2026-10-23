@@ -1,33 +1,27 @@
-{
-  pkgs,
-  ...
-}:
-{
-
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-  wireshark
+    wireshark
 
-  nmap
-  masscan
-  tshark
-  socat
-  netcat-openbsd
-  aircrack-ng
-  burpsuite
-  zap
-  ffuf
-  gobuster
-  sqlmap
-  nikto
-  ghidra
-  radare2
-  binwalk
-  volatility3
-  gdb
-  metasploit
-  john
-  hashcat
-
+    nmap
+    masscan
+    tshark
+    socat
+    netcat-openbsd
+    aircrack-ng
+    burpsuite
+    zap
+    ffuf
+    gobuster
+    sqlmap
+    nikto
+    ghidra
+    radare2
+    binwalk
+    volatility3
+    gdb
+    metasploit
+    john
+    hashcat
   ];
   programs.wireshark.enable = true;
 }

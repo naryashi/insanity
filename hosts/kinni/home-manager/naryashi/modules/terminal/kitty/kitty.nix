@@ -1,9 +1,4 @@
-{
-  pkgs,
-  ...
-}:
-{
-
+{pkgs, ...}: {
   imports = [
     ../shell/zsh.nix
   ];

@@ -1,24 +1,20 @@
-{
-  pkgs,
-  ...
-}:
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     /*
-      Build System & Core Tools
-      gnumake
-      cmake
-      ninja
-      pkg-config
+    Build System & Core Tools
+    gnumake
+    cmake
+    ninja
+    pkg-config
 
-      # C/C++ Toolchain
-      clang
-      clang-tools
+    # C/C++ Toolchain
+    clang
+    clang-tools
     */
     # Nix Toolchain
+    alejandra
     nix
     nil
-    nixfmt
     nix-tree
     nix-update
     nix-eval-jobs

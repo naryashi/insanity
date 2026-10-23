@@ -2,19 +2,25 @@
   pkgs,
   lib,
   ...
-}:
-{
+}: {
   users.users.naryashi = {
     isNormalUser = true;
     description = "naryashi";
     extraGroups = [
-      "networkmanager"
-      "wheel"
       "audio"
+      "disk"
+      "video"
+      "networkmanager"
+      "users"
       "docker"
+      "kvm"
+      "pipewire"
+      "flatpak"
+      "gamemode"
+      "wheel"
+      "virtualisation"
       "podman"
       "wireshark"
-      "virtualisation"
     ];
     subGidRanges = [
       {

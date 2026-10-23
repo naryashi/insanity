@@ -2,9 +2,7 @@
   pkgs,
   lib,
   ...
-}:
-{
-
+}: {
   #GDM
   services.displayManager.gdm.enable = true;
 

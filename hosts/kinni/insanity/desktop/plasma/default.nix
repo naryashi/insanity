@@ -2,9 +2,7 @@
   lib,
   pkgs,
   ...
-}:
-{
-
+}: {
   services = {
     #SDDM
     displayManager.plasma-login-manager.enable = true;
@@ -31,6 +29,5 @@
     oxygen
     #breeze-grub
     #breeze-plymouth
-
   ];
 }

@@ -1,8 +1,4 @@
-{
-  inputs,
-  ...
-}:
-{
+{inputs, ...}: {
   imports = [
     inputs.noctalia.homeModules.default
   ];
@@ -12,10 +8,9 @@
     settings = {
       applauncher = {
         density = "default";
-        pinnedApps = [ ];
+        pinnedApps = [];
         position = "center";
         showCategories = true;
-
       };
 
       bar = {
@@ -40,7 +35,6 @@
         ];
       };
       bar.widgets.right = {
-
         id = [
           "Tray"
           "NotificationHistory"
@@ -60,7 +54,6 @@
         schedulingMode = "off";
         syncGsettings = true;
         useWallpaperColors = false;
-
       };
       dock = {
         enable = false;
@@ -87,7 +80,7 @@
         lockScreenAnimations = false;
         lockScreenBlur = 8;
         lockScreenCountdownDuration = 10000;
-        lockScreenMonitors = [ ];
+        lockScreenMonitors = [];
         lockScreenTint = 0;
         passwordChars = false;
         radiusRatio = 1;
@@ -123,7 +116,6 @@
         disableDesktopWidgets = false;
         disableWallpaper = false;
       };
-
     };
   };
 }

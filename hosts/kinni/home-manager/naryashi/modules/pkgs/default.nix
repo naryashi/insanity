@@ -1,11 +1,5 @@
-{
-  pkgs,
-  ...
-}:
-{
-
+{pkgs, ...}: {
   home.packages = with pkgs; [
-
     #system tools
     cpu-x
     btrfs-progs
@@ -29,7 +23,5 @@
     steam-run
     heroic
     gpu-screen-recorder-gtk
-
   ];
-
 }

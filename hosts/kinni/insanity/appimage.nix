@@ -1,8 +1,4 @@
-{
-  pkgs,
-  ...
-}:
-
+{pkgs, ...}:
 #appimage and generic software
 {
   programs.appimage = {
@@ -107,5 +103,4 @@
       gmp
     ];
   };
-
 }

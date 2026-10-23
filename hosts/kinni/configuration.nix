@@ -1,7 +1,4 @@
-{
-  ...
-}:
-{
+{...}: {
   imports = [
     ./boot.nix
     ./fs.nix
@@ -26,9 +23,8 @@
 
   systemd.services.fwupd-refresh = {
     enable = false;
-    wantedBy = [ ];
+    wantedBy = [];
   };
 
   system.stateVersion = "26.05";
-
 }

@@ -1,9 +1,4 @@
-{
-  pkgs,
-  ...
-}:
-{
-
+{pkgs, ...}: {
   #CLI tools, QoL and DevOps
   home.packages = with pkgs; [
     eza
@@ -36,5 +31,4 @@
     unzip
     onefetch
   ];
-
 }

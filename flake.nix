@@ -16,63 +16,58 @@
     noctalia = {
       url = "github:noctalia-dev/noctalia";
     };
-
   };
-  outputs =
-    {
-      self,
-      nixpkgs,
-      home-manager,
-      niri,
-      ...
-    }@inputs:
-    {
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    niri,
+    ...
+  } @ inputs: {
+    system = [
+      "x86_64-linux"
+      "aarch64-linux"
+      "x86_64-darwin"
+      "aarch64-darwin"
+    ];
 
-      system = [
-        "x86_64-linux"
-        "aarch64-linux"
-        "x86_64-darwin"
-        "aarch64-darwin"
+    niri-flake.cache.enable = true;
+
+    formatter.x86_64-linux = nixpkgs.legacyPackages."x86_64-linux".nixfmt-tree;
+
+    nixosConfigurations.kinni = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs;};
+      modules = [
+        ./hosts/kinni/configuration.nix
+        ./hosts/kinni/hardware.nix
+        ./hosts/kinni/hardware-configuration.nix
+        ./hosts/kinni/boot.nix
+
+        home-manager.nixosModules.home-manager
+        {
+          home-manager = {
+            users.naryashi = import ./hosts/kinni/home-manager/naryashi/home.nix;
+            extraSpecialArgs = {inherit inputs;};
+          };
+
+          nix.settings = {
+            experimental-features = [
+              "nix-command"
+              "flakes"
+            ];
+
+            auto-optimise-store = true;
+          };
+        }
       ];
-
-      niri-flake.cache.enable = true;
-
-      formatter.x86_64-linux = nixpkgs.legacyPackages."x86_64-linux".nixfmt-tree;
-
-      nixosConfigurations.kinni = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./hosts/kinni/configuration.nix
-          ./hosts/kinni/hardware.nix
-          ./hosts/kinni/hardware-configuration.nix
-          ./hosts/kinni/boot.nix
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              users.naryashi = import ./hosts/kinni/home-manager/naryashi/home.nix;
-              extraSpecialArgs = { inherit inputs; };
-            };
-
-            nix.settings = {
-              experimental-features = [
-                "nix-command"
-                "flakes"
-              ];
-
-              auto-optimise-store = true;
-
-            };
-          }
-        ];
-      };
-
-      homeConfigurations."naryashi@kinni" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages."x86_64-linux";
-        modules = [ ./hosts/kinni/home-manager/naryashi/home.nix ];
-        extraSpecialArgs = { inherit inputs; };
-      };
     };
+
+    homeConfigurations."naryashi@kinni" = home-manager.lib.homeManagerConfiguration {
+      pkgs = nixpkgs.legacyPackages."x86_64-linux";
+      modules = [./hosts/kinni/home-manager/naryashi/home.nix];
+      extraSpecialArgs = {inherit inputs;};
+    };
+  };
   nixConfig = {
     extra-substituters = [
       "https://cache.nixos.org/"

@@ -1,8 +1,4 @@
-{
-  pkgs,
-  ...
-}:
-{
+{pkgs, ...}: {
   #CONTAINER
   environment.systemPackages = with pkgs; [
     docker
@@ -24,14 +20,15 @@
     catatonit
 
     (distrobox.overrideAttrs (oldAttrs: {
-      postInstall = (oldAttrs.postInstall or "") + ''
-        for file in $out/bin/*; do
-          sed -i 's|distrobox_path="$(dirname "$(realpath "$0")")"|distrobox_path="/run/current-system/sw/bin"|g' "$file"
-          sed -i 's|distrobox_path="$(dirname "$(readlink -f "$0")")"|distrobox_path="/run/current-system/sw/bin"|g' "$file"
-        done
-      '';
+      postInstall =
+        (oldAttrs.postInstall or "")
+        + ''
+          for file in $out/bin/*; do
+            sed -i 's|distrobox_path="$(dirname "$(realpath "$0")")"|distrobox_path="/run/current-system/sw/bin"|g' "$file"
+            sed -i 's|distrobox_path="$(dirname "$(readlink -f "$0")")"|distrobox_path="/run/current-system/sw/bin"|g' "$file"
+          done
+        '';
     }))
-
   ];
 
   virtualisation = {
@@ -68,5 +65,4 @@
   #   ];
   # preferStaticEmulators = true; # required to work with podman
   #};
-
 }
